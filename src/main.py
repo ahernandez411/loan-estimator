@@ -103,7 +103,7 @@ class Main:
         print("---------------------------------------------------")
         print(f"Total Interest Paid: ${total_interest:.2f}")
         print(f"Loan Amount before Down Payment: ${self.loan_amount:.2f}")
-        print(f"Loan Amount: ${remaining_balance:.2f}")
+        print(f"Loan Amount: ${self.loan_amount - self.down_payment:.2f}")
         print(f"Down Payment: ${self.down_payment:.2f}")
         print(f"Annual Rate: {self.loan_rate}%")
         print(f"Loan Months: {months}")
