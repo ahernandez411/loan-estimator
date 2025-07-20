@@ -1,4 +1,5 @@
 name: Loan Estimator
+run-name: Loan Estimator - APR ${{ inputs.annual_rate_percentage }} - AMOUNT ${{ inputs.loan_amount }} - MONTHS ${{ inputs.loan_months }}
 
 on:
   workflow_dispatch:
