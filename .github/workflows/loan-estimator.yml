@@ -21,7 +21,7 @@ on:
         required: false
       extra_month_amount:
         type: string
-        description: If on month 1 you want to pay $1000 extra, enter as "1: 1000" without the parantheses
+        description: "If on month 1 you want to pay $1000 extra, enter as '1: 1000' without the parantheses"
         required: false
 
 jobs:
