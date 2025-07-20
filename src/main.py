@@ -53,6 +53,8 @@ class Main:
         loan_stats["base"]["monthly-payment"] = f"${monthly_payment:.2f}"
         
         total_interest = 0
+        actual_months = months
+
         for index in range(self.loan_months):
             month_number = index + 1
 
@@ -78,6 +80,7 @@ class Main:
             if remaining_balance == 0:
                 print(f"- Loan is paid off in {month_number-1} months!")
                 loan_stats["base"]["months-actual"] = (month_number-1)
+                actual_months = month_number - 1
                 break
 
             print(f"- Payment Amount: ${principal_interest:.2f}")
@@ -94,7 +97,18 @@ class Main:
             if extra_payment > 0:
                 loan_stats["payment-months"][month_number]["extra-payment"] = True
 
+        print("")
+        print("---------------------------------------------------")
+        print("RESULTS")
+        print("---------------------------------------------------")
         print(f"Total Interest Paid: ${total_interest:.2f}")
+        print(f"Loan Amount before Down Payment: ${self.loan_amount:.2f}")
+        print(f"Loan Amount: ${remaining_balance:.2f}")
+        print(f"Down Payment: ${self.down_payment:.2f}")
+        print(f"Annual Rate: {self.loan_rate}%")
+        print(f"Loan Months: {months}")
+        print(f"Actual Months: {actual_months}")
+        
         loan_stats["base"]["total-interest-paid"] = f"${total_interest:.2f}"
 
         with open("files/loan-details.json", "w") as writer:
