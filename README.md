@@ -1,2 +1,3 @@
-# loan-estimator
-Helps Estimate a Loan and what you Pay over time
+# Loan Estimator
+
+Estimates A Loan Over Time
