@@ -1,0 +1,46 @@
+name: Loan Estimator
+
+on:
+  workflow_dispatch:
+    inputs:
+      annual_rate_percentage:
+        type: number
+        description: The APR. If rate is 6.99% enter 6.99
+        required: true
+      loan_amount:
+        type: number
+        description: The total amount before down payment
+        required: true
+      loan_months:
+        type: number
+        description: The total months of the loan
+        required: true
+      down_payment:
+        type: number
+        description: The amount for the down-payment
+        required: false
+      extra_month_amount:
+        type: string
+        description: If on month 1 you want to pay $1000 extra, enter as "1: 1000" without the parantheses
+        required: false
+
+jobs:
+  estimate-loan:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    
+    - name: Run Loan Estimator
+      shell: bash
+      run: |
+        python3 src/main.py
+      env:
+        APR: ${{ inputs.annual_rate_percentage }}
+        AMOUNT: ${{ inputs.loan_amount }}
+        MONTHS: ${{ inputs.loan_months }}
+        DOWN_PAYMENT: ${{ down_payment}}
+        EXTRA_MONTH_AMOUNT: ${{ inputs.extra_month_amount }}
+
+
+      

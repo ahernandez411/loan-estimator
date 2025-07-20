@@ -1,9 +1,0 @@
-{
-    "rate-percentage": 7.99,
-    "loan-amount": 7000.00,
-    "loan-months": 72,
-    "down-payment": 1000,
-    "large-payments": {
-        "1": 4000
-    }
-}

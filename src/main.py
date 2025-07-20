@@ -1,21 +1,15 @@
 import json
-import os
 
-from lib.loan_terms import LoanTerms
+from lib.env_reader import EnvReader
 
 class Main:
     def __init__(self):
-        path_inputs = "files/input.json"
-        data = {}
-        with open(path_inputs, "r") as reader:
-            data = json.load(reader)
-
-        loan_terms = LoanTerms(data)
-        self.loan_amount = loan_terms.amount
-        self.loan_rate = loan_terms.rate
-        self.loan_months = loan_terms.months
-        self.large_payments = loan_terms.large_payments
-        self.down_payment = loan_terms.down_payment
+        envs = EnvReader()
+        self.loan_amount = envs.amount
+        self.loan_rate = envs.apr
+        self.loan_months = envs.months
+        self.large_payments = envs.extra_payment_months
+        self.down_payment =  envs.down_payment
 
 
     def run(self):
