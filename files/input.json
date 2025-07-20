@@ -1,5 +1,10 @@
 {
     "rate-percentage": 7.99,
-    "loan-amount": 3000.25,
-    "loan-months": 5
+    "loan-amount": 7000.00,
+    "loan-months": 60,
+    "down-payment": 1000,
+    "large-payments": {
+        "2": 4000,
+        "6": 500
+    }
 }

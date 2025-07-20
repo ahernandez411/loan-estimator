@@ -1,0 +1,106 @@
+{
+   "base": {
+      "amount-after-down-payment": "6000.00",
+      "amount-before-down-payment": "7000.00",
+      "amount-down-payment": "1000.00",
+      "annual-percentage-rate": "7.99",
+      "months-actual": 15,
+      "months-maximum": 60,
+      "total-interest-paid": "$168.30"
+   },
+   "monthly-payment": 121.6296527084877,
+   "payment-months": {
+      "1": {
+         "amount": "$121.63",
+         "interest": "$39.95",
+         "principal": "$81.68",
+         "remaining": "$5918.32"
+      },
+      "2": {
+         "amount": "$4000.00",
+         "extra-payment": true,
+         "interest": "$39.41",
+         "principal": "$3960.59",
+         "remaining": "$1957.73"
+      },
+      "3": {
+         "amount": "$121.63",
+         "interest": "$13.04",
+         "principal": "$108.59",
+         "remaining": "$1849.13"
+      },
+      "4": {
+         "amount": "$121.63",
+         "interest": "$12.31",
+         "principal": "$109.32",
+         "remaining": "$1739.81"
+      },
+      "5": {
+         "amount": "$121.63",
+         "interest": "$11.58",
+         "principal": "$110.05",
+         "remaining": "$1629.77"
+      },
+      "6": {
+         "amount": "$500.00",
+         "extra-payment": true,
+         "interest": "$10.85",
+         "principal": "$489.15",
+         "remaining": "$1140.62"
+      },
+      "7": {
+         "amount": "$121.63",
+         "interest": "$7.59",
+         "principal": "$114.04",
+         "remaining": "$1026.59"
+      },
+      "8": {
+         "amount": "$121.63",
+         "interest": "$6.84",
+         "principal": "$114.79",
+         "remaining": "$911.79"
+      },
+      "9": {
+         "amount": "$121.63",
+         "interest": "$6.07",
+         "principal": "$115.56",
+         "remaining": "$796.23"
+      },
+      "10": {
+         "amount": "$121.63",
+         "interest": "$5.30",
+         "principal": "$116.33",
+         "remaining": "$679.90"
+      },
+      "11": {
+         "amount": "$121.63",
+         "interest": "$4.53",
+         "principal": "$117.10",
+         "remaining": "$562.80"
+      },
+      "12": {
+         "amount": "$121.63",
+         "interest": "$3.75",
+         "principal": "$117.88",
+         "remaining": "$444.92"
+      },
+      "13": {
+         "amount": "$121.63",
+         "interest": "$2.96",
+         "principal": "$118.67",
+         "remaining": "$326.25"
+      },
+      "14": {
+         "amount": "$121.63",
+         "interest": "$2.17",
+         "principal": "$119.46",
+         "remaining": "$206.80"
+      },
+      "15": {
+         "amount": "$121.63",
+         "interest": "$1.38",
+         "principal": "$120.25",
+         "remaining": "$86.54"
+      }
+   }
+}
