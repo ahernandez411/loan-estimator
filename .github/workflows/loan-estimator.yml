@@ -39,7 +39,7 @@ jobs:
         APR: ${{ inputs.annual_rate_percentage }}
         AMOUNT: ${{ inputs.loan_amount }}
         MONTHS: ${{ inputs.loan_months }}
-        DOWN_PAYMENT: ${{ down_payment}}
+        DOWN_PAYMENT: ${{ inputs.down_payment}}
         EXTRA_MONTH_AMOUNT: ${{ inputs.extra_month_amount }}
 
 
