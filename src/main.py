@@ -56,7 +56,7 @@ class Main:
         monthly_payment = remaining_balance * fraction
         
         print(f"Monthly Payment ${monthly_payment:.2f}")
-        loan_stats["monthly-payment"] = monthly_payment
+        loan_stats["base"]["monthly-payment"] = f"${monthly_payment:.2f}"
         
         total_interest = 0
         for index in range(self.loan_months):
