@@ -102,13 +102,13 @@ class Main:
         print("---------------------------------------------------")
         print("RESULTS")
         print("---------------------------------------------------")
-        print(f"Total Interest Paid: ${total_interest:.2f}")
         print(f"Loan Amount before Down Payment: ${self.loan_amount:.2f}")
         print(f"Loan Amount: ${self.loan_amount - self.down_payment:.2f}")
         print(f"Down Payment: ${self.down_payment:.2f}")
         print(f"Annual Rate: {self.loan_rate}%")
         print(f"Loan Months: {months}")
         print(f"Actual Months: {actual_months}")
+        print(f"Total Interest Paid: ${total_interest:.2f}")
         
         loan_stats["base"]["total-interest-paid"] = f"${total_interest:.2f}"
 
@@ -118,16 +118,15 @@ class Main:
         if os.path.exists(os.getenv("GITHUB_STEP_SUMMARY")):
             print("Add Results to Step Summary")
             with open(os.getenv("GITHUB_STEP_SUMMARY"), "a") as writer:
-                print("---------------------------------------------------", file=writer)
                 print("RESULTS", file=writer)
                 print("---------------------------------------------------", file=writer)
-                print(f"Total Interest Paid: ${total_interest:.2f}", file=writer)
                 print(f"Loan Amount before Down Payment: ${self.loan_amount:.2f}", file=writer)
                 print(f"Loan Amount: ${self.loan_amount - self.down_payment:.2f}", file=writer)
                 print(f"Down Payment: ${self.down_payment:.2f}", file=writer)
                 print(f"Annual Rate: {self.loan_rate}%", file=writer)
                 print(f"Loan Months: {months}", file=writer)
                 print(f"Actual Months: {actual_months}", file=writer)
+                print(f"Total Interest Paid: ${total_interest:.2f}", file=writer)
 
 
         
