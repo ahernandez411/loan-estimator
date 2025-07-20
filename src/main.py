@@ -1,4 +1,5 @@
 import json
+import os
 
 from lib.env_reader import EnvReader
 
@@ -113,6 +114,20 @@ class Main:
 
         with open("files/loan-details.json", "w") as writer:
             json.dump(loan_stats, writer, indent=3, sort_keys=True)
+        
+        if os.path.exists(os.getenv("GITHUB_STEP_SUMMARY")):
+            print("Add Results to Step Summary")
+            with open(os.getenv("GITHUB_STEP_SUMMARY"), "a") as writer:
+                print("---------------------------------------------------", file=writer)
+                print("RESULTS", file=writer)
+                print("---------------------------------------------------", file=writer)
+                print(f"Total Interest Paid: ${total_interest:.2f}", file=writer)
+                print(f"Loan Amount before Down Payment: ${self.loan_amount:.2f}", file=writer)
+                print(f"Loan Amount: ${self.loan_amount - self.down_payment:.2f}", file=writer)
+                print(f"Down Payment: ${self.down_payment:.2f}", file=writer)
+                print(f"Annual Rate: {self.loan_rate}%", file=writer)
+                print(f"Loan Months: {months}", file=writer)
+                print(f"Actual Months: {actual_months}", file=writer)
 
 
         
